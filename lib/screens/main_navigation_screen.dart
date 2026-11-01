@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 import 'tabs/matches_tab.dart';
-import 'tabs/tournaments_tab.dart';
 import 'tabs/favorites_tab.dart';
+import 'tabs/profile_tab.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   final int initialIndex;
@@ -15,8 +15,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   late int _currentIndex;
   final List<Widget> _tabs = const [
     MatchesTab(),
-    TournamentsTab(),
     FavoritesTab(),
+    ProfileTab(),
   ];
 
   @override
@@ -47,8 +47,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           elevation: 0,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.sports_soccer_rounded), label: 'Matchs'),
-            BottomNavigationBarItem(icon: Icon(Icons.leaderboard_rounded), label: 'Classement'),
             BottomNavigationBarItem(icon: Icon(Icons.star_rounded), label: 'Favoris'),
+            BottomNavigationBarItem(icon: Icon(Icons.person_rounded), label: 'Mon espace'),
           ],
         ),
       ),
